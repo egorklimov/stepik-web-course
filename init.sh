@@ -1,3 +1,4 @@
+mv -T stepik-web-course web
 sudo unlink /etc/nginx/sites-enabled/default
 sudo rm /etc/nginx/nginx.conf
 sudo ln -s /home/box/web/etc/nginx.conf /etc/nginx/nginx.conf
