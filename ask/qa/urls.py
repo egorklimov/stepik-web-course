@@ -17,12 +17,12 @@ Including another URLconf
 from .views import test
 
 #Odler version for stepik
-from django.conf.urls import patterns, include, url
+from django.conf.urls import include, url
 
-urlpatterns = patterns('qa.urls',
+urlpatterns = [
     url(r'^\d/$', test, name='question'),
     url(r'^$', test)
-)
+]
 
 '''
 from django.urls import path, include

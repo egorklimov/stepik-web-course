@@ -20,11 +20,12 @@ from django.conf.urls import include, url
 
 urlpatterns = [
     url('^$', include('qa.urls')),
-    url('^login/', include('qa.urls'), name='login'),
-    url('^signup/', include('qa.urls'), name='signup'),
-    url('^ask/', include('qa.urls'), name='ask'),
-    url('^popular/', include('qa.urls'), name='popular'),
-    url('^new/', include('qa.urls'), name='new'),
+    url('^login/.*', include('qa.urls'), name='login'),
+    url('^signup/.*', include('qa.urls'), name='signup'),
+    url('^ask/.*', include('qa.urls'), name='ask'),
+    url('^question/.*', include('qa.urls'), name='question'),
+    url('^popular/.*', include('qa.urls'), name='popular'),
+    url('^new/.*', include('qa.urls'), name='new'),
 ]
 
 '''
@@ -35,6 +36,7 @@ urlpatterns  = [
     path('login/', include('qa.urls'), name='login'),
     path('signup/', include('qa.urls'), name='signup'),
     path('ask/', include('qa.urls'), name='ask'),
+    path('question/', include('qa.url'), name='question')
     path('popular/', include('qa.urls'), name='popular'),
     path('new/', include('qa.urls'), name='new'),
 ]
