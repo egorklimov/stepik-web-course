@@ -14,11 +14,20 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from django.urls import path, include
-
 from .views import test
 
+#Odler version for stepik
+from django.conf.urls import patterns, include, url
+
+urlpatterns = patterns('qa.urls',
+    url(r'^\d/$', test, name='question'),
+    url(r'^$', test)
+)
+
+'''
+from django.urls import path, include
 urlpatterns  =  [
     path('<int:id>/', test, name='question'),
     path('', test)
 ]
+'''
