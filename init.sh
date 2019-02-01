@@ -5,4 +5,6 @@ sudo ln -s /home/box/web/etc/nginx.conf /etc/nginx/nginx.conf
 sudo /etc/init.d/nginx restart
 sudo ln -s /home/box/web/etc/gunicorn-django.conf /etc/gunicorn.d/test
 sudo /etc/init.d/gunicorn restart
-#sudo /etc/init.d/mysql start
+sudo /etc/init.d/mysql start
+
+mysql -u root -e "create database ask"
